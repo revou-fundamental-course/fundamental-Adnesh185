@@ -5,34 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gelang.mo</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
 </head>
 <body>
+    <!--navigasi-->
     <header>
         <div class="navbar">
-            <h1>Gelang.<span class = "warna">mo</span></h1>
+            <h1>Gelang.<span class="warna">mo</span></h1>
             <nav>
                 <ul>
                     <li><a href="#">Beranda</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropbtn">Kategori Produk</a>
-                        <div class="dropdown-content">
-                            <a href="#">Gelang Tali</a>
-                            <a href="#">Gelang Manik</a>
-                            <a href="#">Cincin tali</a>
-                            <a href="#">Cincin Manik</a>
-                        </div>
+                        <a href="#kategori_produk" class="dropbtn">Kategori Produk</a>
+                        
                     </li>
-                    <li><a href="#">Search</a></li>
+                    
+                    <li><a href="#contact-us">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
+        <!--ucapan kepada user-->
         <section class="hero">
-            <h2>Gelang.<span class="warna">mo</span></h2>
-            <p>aksesoris dari manik dan perpaduan manis dari tali yang di desain dengan cutie</p>
+            <h2 id="welcome-message">Hai User, Selamat Datang</h2>
+            <p>Temukan koleksi gelang eksklusif yang dirancang Gelang.mo <br>
+            untuk menambah keindahan dan keunikan gaya Anda.</p>
         </section>
-        <section class="product-categories">
+        <!--kategori atau jenis produk-->
+        <section class="product-categories" id="kategori_produk">
             <h3>Kategori Produk</h3>
             <div class="products">
                 <div class="product">
@@ -54,6 +55,40 @@
             </div>
         </section>
     </main>
-    <script src="script.js"></script>
+    <footer>
+        <!--form contact us-->
+        <section id="contact-us" class="contact-us">
+            <h3>Contact Us</h3>
+            <form id="orderForm">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="dob">Tanggal Lahir:</label>
+                <input type="date" id="dob" name="dob" required>
+                
+                <label for="product">Barang yang Dipesan:</label>
+                <select id="product" name="product">
+                    <option value="gelang-tali">Gelang Tali</option>
+                    <option value="gelang-manik">Gelang Manik</option>
+                    <option value="cincin-tali">Cincin Tali</option>
+                    <option value="cincin-manik">Cincin Manik</option>
+                </select>
+                
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit" name="submit">Kirim</button>
+            </form>
+        </section>
+    </footer>
+    <!--hasil-->
+    <div class="box-shadow">
+        <div class="box">
+            <p>Nama: <span id="displayNama"></span></p>
+            <p>Tanggal Lahir: <span id="displayTanggal"></span></p>
+            <p>Barang yang Dipesan: <span id="displayPesanan"></span></p>
+            <p>Pesan: <span id="displayPesan"></span></p>
+        </div>
+    </div>
 </body>
 </html>
